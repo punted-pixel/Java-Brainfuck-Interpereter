@@ -8,9 +8,11 @@ import java.util.Stack;
 public class CodeExecutionManager {
 	private String sourceText;
 	private int codePointer; //keeps track of where in the code the program is
-	private Stack<Integer> CodePointerStack;
+	private Stack<Integer> codePointerStack;
 	
 	public CodeExecutionManager(String sourceText) {
-		
+		this.sourceText = sourceText;
+		this.codePointer = 0;
+		this.codePointerStack = new Stack<Integer>();
 	}
 }
