@@ -76,7 +76,7 @@ public class DataStateManager {
 		
 		int value = data.get(dataPointer);
 		
-		System.out.println((char) value); 
+		System.out.print((char) value); 
 	}
 	
 	public void inputCellValue() {
