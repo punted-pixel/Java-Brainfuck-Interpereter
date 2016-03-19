@@ -46,6 +46,12 @@ public class DataStateManager {
 		 */
 		dataPointer += 1;
 	}
+	public int getCellValue() {
+		/* get value at memory cell location
+		 * 
+		 */
+		return data.get(dataPointer);
+	}
 	
 	public void shiftPointerLeft() {
 		/*
