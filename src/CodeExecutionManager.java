@@ -103,6 +103,16 @@ public class CodeExecutionManager {
 		}
 	}
 	
+	public void runExecutionLoop() {
+		/*
+		 * main loop for iterating through every brainfuck instruction and executing them
+		 */
+		while(true) {
+			executeInstruction();  //not sure if it would be better to make this method parameterized 
+			stepInstruction();
+		}
+	}
+	
 	
 }
 
