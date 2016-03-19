@@ -108,7 +108,7 @@ public class CodeExecutionManager {
 		 * main loop for iterating through every brainfuck instruction and executing them
 		 */
 		while(codePointer < sourceText.length()) {
-			System.out.println(dataStateManager.toString());
+		//	System.out.println(dataStateManager.toString());
 			executeInstruction();  //not sure if it would be better to make this method parameterized 
 			stepInstruction();
 		}
@@ -122,9 +122,9 @@ public class CodeExecutionManager {
 		//manager.runExecutionLoop();
 		
 		manager = new CodeExecutionManager("[->+<]");
-		manager.runExecutionLoop();
-		manager = new CodeExecutionManager("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.");
 		//manager.runExecutionLoop();
+		manager = new CodeExecutionManager("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.");
+		manager.runExecutionLoop();
 	}
 	
 	

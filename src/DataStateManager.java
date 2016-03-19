@@ -30,8 +30,8 @@ public class DataStateManager {
 		//value = value + 1;  doesn't work because value is auto casted to primitive int instead of reference
 		
 		data.set(dataPointer, data.get(dataPointer) + 1);
-		System.out.println("Value " + data.get(dataPointer));
-		System.out.println(data);
+		//System.out.println("Value " + data.get(dataPointer));
+		//System.out.println(data);
 	}
 	
 	public void decrement() {
@@ -41,7 +41,7 @@ public class DataStateManager {
 		
 		data.set(dataPointer, data.get(dataPointer) - 1);
 		
-		System.out.println(data);
+		//System.out.println(data);
 	}
 	public void shiftPointerRight() {
 		/*
