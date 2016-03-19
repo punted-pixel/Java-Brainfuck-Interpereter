@@ -50,6 +50,9 @@ public class CodeExecutionManager {
 			openBracket();
 			break;
 			
+		case ']':
+			closeBracket();
+			break;
 		}
 	
 	}
@@ -83,6 +86,20 @@ public class CodeExecutionManager {
 					
 				}
 			}
+		}
+	}
+	
+	public void closeBracket() {
+		/*
+		 * Handles closed brackets signifying end of loop block
+		 * if the memory cell is equal to 0 (false) jump to the position of the corresponding opening bracket.
+		 * otherwise, forget that position and continue sequential execution of code at the next instruction
+		 */
+		if(!dataStateManager.testLoop()) {
+			codePointer = codePointerStack.peek();
+		}
+		else {
+			codePointerStack.pop();
 		}
 	}
 	
