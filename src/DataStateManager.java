@@ -78,6 +78,18 @@ public class DataStateManager {
 		
 	}
 	
+	public boolean testLoop() {
+		/*
+		 * tests whether loop condition is satisfied
+		 * if the data cell has a value of 0 return false
+		 * otherwise return true
+		 */
+		if(data.get(dataPointer) == 0) {
+			return false;
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		/*
 		 * main method for testing purposes, not for actual execution of program.
