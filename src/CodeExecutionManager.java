@@ -107,10 +107,18 @@ public class CodeExecutionManager {
 		/*
 		 * main loop for iterating through every brainfuck instruction and executing them
 		 */
-		while(true) {
+		while(codePointer < sourceText.length()) {
 			executeInstruction();  //not sure if it would be better to make this method parameterized 
 			stepInstruction();
 		}
+	}
+	
+	public static void main(String[] args) {
+		/*
+		 * For testing purposes only--not for actual execution of program
+		 */
+		CodeExecutionManager manager = new CodeExecutionManager("++++.");
+		manager.runExecutionLoop();
 	}
 	
 	
