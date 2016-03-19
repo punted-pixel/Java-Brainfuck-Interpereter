@@ -46,10 +46,46 @@ public class CodeExecutionManager {
 		case ',':
 			dataStateManager.inputCellValue();
 			break;
-		
+		case '[':
+			openBracket();
+			break;
 			
 		}
+	
 	}
+
+	public void openBracket() {  //TODO:  I need to think of a better name for this method
+		/*
+		 * Handles behavior for beginning of loop
+		 */
+		if(!dataStateManager.testLoop()) {
+			codePointerStack.push(codePointer);
+			
+		}
+		else {
+			boolean isInInnerLoop = false;
+			for(int i = codePointer+1; i < sourceText.length(); i++) {
+				/*
+				 * search for closing brace, ignoring any inner loops
+				 */
+			
+				if(sourceText.charAt(i) == '[') {
+					isInInnerLoop = true;
+				}
+				if(!isInInnerLoop) {
+					if(sourceText.charAt(i) == ']') {
+						codePointer = i+1;
+						break;
+					}
+				}
+				else if(sourceText.charAt(i) == ']') {
+					isInInnerLoop = false;
+					
+				}
+			}
+		}
+	}
+	
 	
 }
 

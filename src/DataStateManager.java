@@ -52,7 +52,12 @@ public class DataStateManager {
 		 */
 		return data.get(dataPointer);
 	}
-	
+	public int getActiveCellIndex() {
+		/*
+		 * returns the index of the cell currently being pointed to
+		 */
+		return dataPointer;
+	}
 	public void shiftPointerLeft() {
 		/*
 		 * shift the data pointer left one cell
