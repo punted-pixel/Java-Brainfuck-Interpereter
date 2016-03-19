@@ -31,6 +31,7 @@ public class DataStateManager {
 		
 		data.set(dataPointer, data.get(dataPointer) + 1);
 		System.out.println("Value " + data.get(dataPointer));
+		System.out.println(data);
 	}
 	
 	public void decrement() {
@@ -39,6 +40,8 @@ public class DataStateManager {
 		 */
 		
 		data.set(dataPointer, data.get(dataPointer) - 1);
+		
+		System.out.println(data);
 	}
 	public void shiftPointerRight() {
 		/*
@@ -96,9 +99,13 @@ public class DataStateManager {
 		 * otherwise return true
 		 */
 		if(data.get(dataPointer) == 0) {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
+	}
+	
+	public String toString() {
+		return data.toString();
 	}
 	
 	public static void main(String[] args) {
