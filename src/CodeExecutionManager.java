@@ -118,7 +118,11 @@ public class CodeExecutionManager {
 		 * For testing purposes only--not for actual execution of program
 		 */
 		CodeExecutionManager manager = new CodeExecutionManager("++++.");
-		manager.runExecutionLoop();
+		//manager.runExecutionLoop();
+		
+		manager = new CodeExecutionManager("[->+<]");
+		//manager.runExecutionLoop();
+		manager = new CodeExecutionManager("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.");
 	}
 	
 	
